@@ -35,5 +35,4 @@ const EventPreventDefault = (props) => {
     </div>
   );
 };
-console.log(">>> EventPreventDefault rendered");
 export default EventPreventDefault;
