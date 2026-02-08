@@ -7,6 +7,7 @@ import Lesson3 from "./lessons/Lesson3/Lesson3";
 import Lesson4 from "./lessons/Lesson4/Lesson4";
 import Lesson5 from "./lessons/Lesson5/Lesson5";
 import Lesson6 from "./lessons/Lesson6/Lesson6";
+import Lesson7 from "./lessons/Lesson7/Lesson7";
 const App = () => {
   const [count, setCount] = useState(0);
 
@@ -22,6 +23,7 @@ const App = () => {
       {/* <Lesson4 /> */}
       {/* <Lesson5 /> */}
       {/* <Lesson6 /> */}
+      <Lesson7 />
       <Footer />
     </div>
   );
