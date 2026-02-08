@@ -7,12 +7,13 @@ const EventPreventDefault = (props) => {
   const handleOnSumbit = (event) => {
     console.log(">>> check data submit, email= ", email, " pass: ", password);
     alert('me')
+    event.preventDefault();
   };
 
   return (
     <div className="event-prevent-default">
       <form 
-    //   onSubmit={handleOnSumbit}
+      onSubmit={handleOnSumbit}
     //   onSubmit={() => handleOnSumbit}
       >
         <div className="input-group">
