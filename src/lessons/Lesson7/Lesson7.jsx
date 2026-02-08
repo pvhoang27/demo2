@@ -1,11 +1,9 @@
 const Lesson7 = (props) => {
   (function () {
     console.log("Anonymous function called");
-  });
+  })();
 
-  a = function () {
-    console.log("Anonymous function called a");
-  };
+ 
 
  
   return (
