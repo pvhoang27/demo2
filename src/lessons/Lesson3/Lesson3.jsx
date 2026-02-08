@@ -11,7 +11,14 @@ const Lesson3 = (props) => {
         value={name}
       />
       <div>Your name 's ... {name} </div>
-      <CoolButton />
+      <CoolButton 
+      btnClass={"primary"}
+      title={"Primary"}
+      />
+      <CoolButton 
+      btnClass={"primary"}
+      title={"Primary"}
+      />
     </div>
   );
 };
