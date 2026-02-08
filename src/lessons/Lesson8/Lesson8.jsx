@@ -13,10 +13,14 @@ const Lesson8 = (props) => {
         <div className="lesson8">
             <h3>Lesson 8 :</h3>
             <div>
-                <button onClick={handleOnClick2}> Tham Chiếu</button>
+                <button 
+                // onClick={handleOnClick2}
+                > Tham Chiếu</button>
             </div>
             <div>
                 <button
+
+                onClick={alert('Click me')}
                 >Inline</button>
             </div>
             <div>
