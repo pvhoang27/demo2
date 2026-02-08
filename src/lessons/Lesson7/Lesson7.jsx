@@ -3,11 +3,11 @@ const Lesson7 = (props) => {
     console.log("Anonymous function called");
   });
 
-  let a = function () {
+  a = function () {
     console.log("Anonymous function called a");
   };
 
-  a();
+ 
   return (
     <div style={{ padding: "50px" }}>
       <h3>Lesson 7 Anonymous Function:</h3>
