@@ -12,11 +12,15 @@ const LoginForm = (props) => {
         <div className="login-form-container">
             <div className="group-input">
                 <label>Email</label>
-                <input type={"email"} />
+                <input type={"email"}
+                value={email}
+                onChange={(event) => setEmail(event.target.value)} />
             </div>
             <div className="group-input">
                 <label>Password</label>
-                <input type={"password"} />
+                <input type={"password"}
+                value={password}
+                onChange={(event) => setPassword(event.target.value)} />
             </div>
             <div>
                 <button onClick={() => handleSubmitLogin()}>Login</button>
