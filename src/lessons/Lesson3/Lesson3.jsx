@@ -1,4 +1,6 @@
+import React, { useState } from 'react';
 const Lesson3 = (props) => {
+    const [name , setName] = useState('');
     return (
         <div>
             <label>Name:</label>
