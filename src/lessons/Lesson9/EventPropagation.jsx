@@ -5,7 +5,7 @@ const EventPropagation = (props) => {
 
     const handleClickChild = (event) => {
         console.log(">>> run handleClickChild")
-        // event.stopPropagation();
+        event.stopPropagation();
     }
 
     return (
