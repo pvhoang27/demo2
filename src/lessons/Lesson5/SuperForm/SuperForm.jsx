@@ -21,19 +21,19 @@ const SuperForm = (props) => {
             {[...Array(200)].map((e, index) => {
                 return (
                     <div className='input-group' key={`index-${index}`}>
-                        <label>Field {index + 1}</label>
+                        {/* <label>Field {index + 1}</label>
                         <input
                             type={'text'}
                             name={`field-${index + 1}`}
                             value={form[`field-${index + 1}`]}
                             onChange={handleChangeInput}
-                        />
+                        /> */}
 
-                        {/* <SuperInput
+                        <SuperInput
                             index={index}
                             handleChangeInput={handleChangeInput}
                             value={form[`field-${index + 1}`]}
-                        /> */}
+                        />
                     </div>
                 )
             })}
