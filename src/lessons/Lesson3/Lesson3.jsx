@@ -16,8 +16,8 @@ const Lesson3 = (props) => {
       title={"Primary"}
       />
       <CoolButton 
-      btnClass={"primary"}
-      title={"Primary"}
+      btnClass={"warning"}
+      title={"Warning"}
       />
     </div>
   );
