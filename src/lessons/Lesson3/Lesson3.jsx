@@ -4,8 +4,11 @@ const Lesson3 = (props) => {
     return (
         <div>
             <label>Name:</label>
-            <input type={'text'} />
-            <div>Your name 's ... </div>
+            <input type={'text'} 
+            onChange={(event) => setName(event.target.value)}
+            value={name}
+            />
+            <div>Your name 's ...{name} </div>
         </div>
     )
 }
