@@ -3,8 +3,7 @@ import "./App.css";
 import NavBar from "./components/Header/NavBar";
 import Content from "./components/Main/Content";
 import Footer from "./components/Footer/Footer";
-import Lesson3 from "./components/Lessons/Lesson3";
-
+import Lesson3 from "../docs/Lesson3/Lesson3";
 const App = () => {
   const [count, setCount] = useState(0);
 
