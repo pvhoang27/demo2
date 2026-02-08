@@ -11,7 +11,10 @@ const EventPreventDefault = (props) => {
 
   return (
     <div className="event-prevent-default">
-      <form onSubmit={handleOnSumbit}>
+      <form 
+    //   onSubmit={handleOnSumbit}
+    //   onSubmit={() => handleOnSumbit}
+      >
         <div className="input-group">
           <label>Email</label>
           <input
