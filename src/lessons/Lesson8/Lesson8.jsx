@@ -27,7 +27,8 @@ const Lesson8 = (props) => {
             <div>
                 <button
                 
-                onClick={() =>{alert('Click me')}}
+                // onClick={() =>{alert('Click me')}}
+                 onClick={ (() =>{alert('Click me')} )() }
                 >Arrow function</button>
             </div>
         </div>
