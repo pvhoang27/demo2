@@ -14,7 +14,8 @@ const Lesson8 = (props) => {
             <h3>Lesson 8 :</h3>
             <div>
                 <button 
-                // onClick={handleOnClick2}
+                onClick={handleOnClick2}
+                // onClick= {handleOnClick2()}
                 > Tham Chiếu</button>
             </div>
             <div>
