@@ -20,11 +20,14 @@ const Lesson8 = (props) => {
             <div>
                 <button
 
-                onClick={alert('Click me')}
+                // onClick={alert('Click me')}
                 >Inline</button>
             </div>
             <div>
-                <button>Arrow function</button>
+                <button
+                
+                onClick={() =>{}}
+                >Arrow function</button>
             </div>
         </div>
     )
