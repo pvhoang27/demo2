@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CoolButton from "./CoolButton";
 const Lesson3 = (props) => {
   const [name, setName] = useState("");
   return (
@@ -10,6 +11,7 @@ const Lesson3 = (props) => {
         value={name}
       />
       <div>Your name 's ... {name} </div>
+      <CoolButton />
     </div>
   );
 };
