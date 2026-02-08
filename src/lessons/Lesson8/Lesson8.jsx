@@ -13,10 +13,11 @@ const Lesson8 = (props) => {
         <div className="lesson8">
             <h3>Lesson 8 :</h3>
             <div>
-                <button>Tham Chiếu</button>
+                <button onClick={handleOnClick2}> Tham Chiếu</button>
             </div>
             <div>
-                <button>Inline</button>
+                <button
+                >Inline</button>
             </div>
             <div>
                 <button>Arrow function</button>
