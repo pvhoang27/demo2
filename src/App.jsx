@@ -20,7 +20,6 @@ const App = () => {
         count={count}
         setCount={setCount}
       /> */}
-
       {/* <Lesson3 /> */}
       {/* <Lesson4 /> */}
       {/* <Lesson5 /> */}
@@ -32,5 +31,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
