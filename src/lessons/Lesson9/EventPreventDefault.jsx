@@ -6,7 +6,7 @@ const EventPreventDefault = (props) => {
 
   const handleOnSumbit = (event) => {
     console.log(">>> check data submit, email= ", email, " pass: ", password);
-    // alert('me')
+    alert('me')
   };
 
   return (
