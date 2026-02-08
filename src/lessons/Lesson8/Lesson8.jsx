@@ -1,9 +1,9 @@
 import './Lesson8.scss';
 
 const Lesson8 = (props) => {
-    function handleOnClick1() {
-        alert('click me')
-    }
+    // function handleOnClick1() {
+    //     alert('click me')
+    // }
 
     const handleOnClick2 = () => {
         alert('click me')
