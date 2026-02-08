@@ -1,10 +1,10 @@
 const Lesson7 = (props) => {
-  ( ()  => {
+  let a  =  ()  => {
     console.log("Anonymous function called");
-  });
+  };
 
  
-
+  a();
  
   return (
     <div style={{ padding: "50px" }}>
