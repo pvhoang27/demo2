@@ -120,11 +120,8 @@ const QuizQA = (props) => {
       setQuestions([...questions, newQuestion]);
     }
     if (type === "REMOVE") {
-      setQuestions((draft) => {
-        draft = draft.filter((item) => item.id !== id);
-        console.log(draft);
-      });
-
+      let newQuestions = questions.filter((item) => item.id !== id);
+      setQuestions(newQuestions);
     }
   };
 
