@@ -1,3 +1,4 @@
+import _ from 'lodash';
 const Lesson25 = (props) => {
     const person = {
         name: 'abc',
