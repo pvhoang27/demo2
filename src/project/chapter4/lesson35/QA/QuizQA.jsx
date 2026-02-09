@@ -150,29 +150,28 @@ const QuizQA = (props) => {
 
   const handleOnChange = (type, questionId, value) => {
     if (type === "QUESTION") {
-      let questionsClone = _.cloneDeep(questions);
-
-      let index = questionsClone.findIndex((item) => item.id === questionId);
+      let index = questions.findIndex((item) => item.id === questionId);
       if (index > -1) {
-        questionsClone[index].description = value;
-        setQuestions(questionsClone);
+        setQuestions((draft) => {
+          draft[index].description = value;
+        });
       }
     }
   };
 
   const handleOnChangeFileQuestion = (questionId, event) => {
-    let questionsClone = _.cloneDeep(questions);
 
-    let index = questionsClone.findIndex((item) => item.id === questionId);
+    let index = questions.findIndex((item) => item.id === questionId);
     if (
       index > -1 &&
       event.target &&
       event.target.files &&
       event.target.files[0]
     ) {
-      questionsClone[index].imageFile = event.target.files[0];
-      questionsClone[index].imageName = event.target.files[0].name;
-      setQuestions(questionsClone);
+      setQuestions((draft) => {
+        draft[index].imageFile = event.target.files[0];
+        draft[index].imageName = event.target.files[0].name;
+      });
     }
   };
 
