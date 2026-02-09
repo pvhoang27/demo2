@@ -160,7 +160,6 @@ const QuizQA = (props) => {
   };
 
   const handleOnChangeFileQuestion = (questionId, event) => {
-
     let index = questions.findIndex((item) => item.id === questionId);
     if (
       index > -1 &&
@@ -176,11 +175,10 @@ const QuizQA = (props) => {
   };
 
   const handleAnswerQuestion = (type, answerId, questionId, value) => {
-    let questionsClone = _.cloneDeep(questions);
-    let index = questionsClone.findIndex((item) => item.id === questionId);
+    let index = questions.findIndex((item) => item.id === questionId);
     if (index > -1) {
-      questionsClone[index].answers = questionsClone[index].answers.map(
-        (answer) => {
+      setQuestions((draft) => {
+        draft[index].answers = draft[index].answers.map((answer) => {
           if (answer.id === answerId) {
             if (type === "CHECKBOX") {
               answer.isCorrect = value;
@@ -190,10 +188,8 @@ const QuizQA = (props) => {
             }
           }
           return answer;
-        },
-      );
-
-      setQuestions(questionsClone);
+        });
+      });
     }
   };
 
