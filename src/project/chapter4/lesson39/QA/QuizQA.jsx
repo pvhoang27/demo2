@@ -324,7 +324,7 @@ const QuizQA = (props) => {
 
   console.log(cauHoiObj);
   const tifOptions = Object.keys(cauHoiObj).map((key, index) => 
-  console.log(key , index)
+  console.log(key , index, cauHoiObj[key])
 )
 
   return (
@@ -340,21 +340,20 @@ const QuizQA = (props) => {
         </div>
         <div className="mt-3 mb-2 ">Add questions:</div>
         {questions &&
-          questions.length > 0 &&
-          questions.map((question, index) => {
+           Object.keys(cauHoiObj).map((keyQ, index) => {
             return (
-              <div key={question.id} className="q-main mb-4">
+              <div key={keyQ} className="q-main mb-4">
                 <div className="questions-content">
                   <div className="form-floating description">
                     <input
                       type="type"
                       className="form-control"
                       placeholder="name@example.com"
-                      value={question.description}
+                      value={cauHoiObj[keyQ].description}
                       onChange={(event) =>
                         handleOnChange(
                           "QUESTION",
-                          question.id,
+                          cauHoiObj[keyQ].id,
                           event.target.value,
                         )
                       }
@@ -362,24 +361,24 @@ const QuizQA = (props) => {
                     <label>Question {index + 1} 's description</label>
                   </div>
                   <div className="group-upload">
-                    <label htmlFor={`${question.id}`}>
+                    <label htmlFor={`${cauHoiObj[keyQ].id}`}>
                       <RiImageAddFill className="label-up" />
                     </label>
                     <input
-                      id={`${question.id}`}
+                      id={`${cauHoiObj[keyQ].id}`}
                       onChange={(event) =>
-                        handleOnChangeFileQuestion(question.id, event)
+                        handleOnChangeFileQuestion(cauHoiObj[keyQ].id, event)
                       }
                       type={"file"}
                       hidden
                     />
                     <span>
-                      {question.imageName ? (
+                      {cauHoiObj[keyQ].imageName ? (
                         <span
                           style={{ cursor: "pointer" }}
-                          onClick={() => handlePreviewImage(question.id)}
+                          onClick={() => handlePreviewImage(cauHoiObj[keyQ].id)}
                         >
-                          {question.imageName}
+                          {cauHoiObj[keyQ].imageName}
                         </span>
                       ) : (
                         "0 file is uploaded"
@@ -390,10 +389,10 @@ const QuizQA = (props) => {
                     <span onClick={() => handleAddRemoveQuestion("ADD", "")}>
                       <BsFillPatchPlusFill className="icon-add" />
                     </span>
-                    {questions.length > 1 && (
+                    {Object.keys(cauHoiObj).length > 1 && (
                       <span
                         onClick={() =>
-                          handleAddRemoveQuestion("REMOVE", question.id)
+                          handleAddRemoveQuestion("REMOVE", cauHoiObj[keyQ].id)
                         }
                       >
                         <BsPatchMinusFill className="icon-remove" />
@@ -402,9 +401,9 @@ const QuizQA = (props) => {
                   </div>
                 </div>
 
-                {question.answers &&
-                  question.answers.length > 0 &&
-                  question.answers.map((answer, index) => {
+                {cauHoiObj[keyQ].answers &&
+                  cauHoiObj[keyQ].answers.length > 0 &&
+                  cauHoiObj[keyQ].answers.map((answer, index) => {
                     return (
                       <div key={answer.id} className="answers-content">
                         <input
