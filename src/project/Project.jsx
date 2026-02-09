@@ -8,7 +8,7 @@ const Project = (props) => {
     <div className="project">
       <Login />
       {/* <Lesson26 /> */}
-      {/* <Lesson17 /> */}
+      <Lesson17 />
     </div>
   );
 };
