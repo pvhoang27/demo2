@@ -20,6 +20,26 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { normalize, schema } from "normalizr";
 
 const QuizQA = (props) => {
+  const cauhoiId = uuidv4();
+  const dapAnId = uuidv4();
+  const [cauHoiObj, setCauHoiObj] = useState({
+    [cauhoiId]: {
+      id: cauhoiId,
+      description: "",
+      imageFile: "",
+      imageName: "",
+      answers: [dapAnId],
+    },
+  });
+  const [dapAnObj, setDapAnObj] = useState({
+    [dapAnId]: {
+      id: dapAnId,
+      description: "",
+      isCorrect: false,
+    },
+  });
+
+  answer = {};
   const initQuestions = [
     {
       id: uuidv4(),
@@ -92,11 +112,13 @@ const QuizQA = (props) => {
       const question = new schema.Entity("question", {
         answers: [answer],
       });
-      const q = new schema.Entity("quiz", [question]);
-      const normalizedData2 = normalize(newQA, q);
+      //   const q = new schema.Entity("quiz", [question]);
+      const d = normalize(newQA, [question]);
 
-      console.log(">>> check normalized data: ", normalizedData2);
-   
+      console.log(">>> check normalized data: ", d);
+      console.log(d);
+      //   setCauHoiObj(d.entities.question);
+      //   setDapAnObj(d.entities.answer);
     }
   };
   const fetchQuiz = async () => {
