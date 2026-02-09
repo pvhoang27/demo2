@@ -5,12 +5,12 @@ import "nprogress/nprogress.css";
 // import Lesson27 from "./chapter4/lesson27/Lesson27";
 // import Lesson29 from "./chapter4/lesson29/Lesson29";
 // import Lesson32 from "./chapter4/lesson32/Lesson32";
-import Lesson33 from "./chapter4/lesson33/Lesson33";
+import Lesson35 from "./chapter4/lesson35/Lesson35";
 const Project = (props) => {
   return (
     <div className="project">
       <Login />
-      <Lesson33 />
+      <Lesson35 />
     </div>
   );
 };
