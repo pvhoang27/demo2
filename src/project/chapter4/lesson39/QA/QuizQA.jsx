@@ -30,6 +30,13 @@ const QuizQA = (props) => {
       imageName: "",
       answers: [dapAnId],
     },
+    [cauhoiId +  1 ]: {
+      id: cauhoiId,
+      description: "",
+      imageFile: "",
+      imageName: "",
+      answers: [dapAnId],
+    },
   });
   const [dapAnObj, setDapAnObj] = useState({
     [dapAnId]: {
@@ -314,6 +321,11 @@ const QuizQA = (props) => {
       setIsPreviewImage(true);
     }
   };
+
+  console.log(cauHoiObj);
+  const tifOptions = Object.keys(cauHoiObj).map((key, index) => 
+  console.log(key , index)
+)
 
   return (
     <div className="questions-container">
