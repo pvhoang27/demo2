@@ -16,6 +16,7 @@ import {
 import { toast } from 'react-toastify';
 import "react-awesome-lightbox/build/style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { normalize, schema } from 'normalizr';
 
 const QuizQA = (props) => {
     const initQuestions = [
