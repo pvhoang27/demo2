@@ -2,9 +2,9 @@ import { normalize, schema } from 'normalizr';
 import QuizQA from './QA/QuizQA';
 
 const Lesson39 = (props) => {
-    const runExample1 = false;
+    const runExample1 = true;
     const runExample2 = false;
-    const runExample3 = true;
+    const runExample3 = false;
 
     //example with object
     if (runExample1) {
