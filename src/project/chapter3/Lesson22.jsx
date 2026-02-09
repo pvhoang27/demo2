@@ -43,7 +43,7 @@ const Lesson22 = (props) => {
 
     return (
         <div>
-            Lesson 22;
+            Lesson 22
         </div>
     )
 }
