@@ -7,7 +7,7 @@ import { AiOutlineMinusCircle } from "react-icons/ai";
 import { AiFillPlusSquare } from "react-icons/ai";
 import { RiImageAddFill } from "react-icons/ri";
 import { v4 as uuidv4 } from "uuid";
-import _ from "lodash";
+import _, { set } from "lodash";
 import Lightbox from "react-awesome-lightbox";
 import {
   getQuizWithQA,
@@ -126,7 +126,6 @@ const QuizQA = (props) => {
   };
 
   const handleAddRemoveAnswer = (type, questionId, anwserId) => {
-    let questionsClone = _.cloneDeep(questions);
     if (type === "ADD") {
       const newAnswer = {
         id: uuidv4(),
@@ -134,16 +133,18 @@ const QuizQA = (props) => {
         isCorrect: false,
       };
 
-      let index = questionsClone.findIndex((item) => item.id === questionId);
-      questionsClone[index].answers.push(newAnswer);
-      setQuestions(questionsClone);
+      setQuestions((draft) => {
+        let index = draft.findIndex((item) => item.id === questionId);
+        draft[index].answers.push(newAnswer);
+      });
     }
     if (type === "REMOVE") {
-      let index = questionsClone.findIndex((item) => item.id === questionId);
-      questionsClone[index].answers = questionsClone[index].answers.filter(
-        (item) => item.id !== anwserId,
-      );
-      setQuestions(questionsClone);
+      setQuestions((draft) => {
+        let index = draft.findIndex((item) => item.id === questionId);
+        draft[index].answers = questions[index].answers.filter(
+          (item) => item.id !== anwserId,
+        );
+      });
     }
   };
 
