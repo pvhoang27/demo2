@@ -92,10 +92,11 @@ const QuizQA = (props) => {
       const question = new schema.Entity("question", {
         answers: [answer],
       });
-      const q = new schema.Entity("quiz", { questions: [question] });
+      const q = new schema.Entity("quiz", [question]);
       const normalizedData2 = normalize(newQA, q);
 
       console.log(">>> check normalized data: ", normalizedData2);
+   
     }
   };
   const fetchQuiz = async () => {
