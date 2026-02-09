@@ -11,6 +11,8 @@ import Lesson7 from "./lessons/Lesson7/Lesson7";
 import Lesson8 from "./lessons/Lesson8/Lesson8";
 import Lesson9 from "./lessons/Lesson9/Lesson9";
 import Lesson10 from "./lessons/Lesson10/Lesson10";
+import Project from "./project/Project";
+// import Lesson17 from "./lessons/Lesson17.jsx";
 const App = () => {
   const [count, setCount] = useState(0);
 
@@ -27,8 +29,10 @@ const App = () => {
       {/* <Lesson6 /> */}
       {/* <Lesson7 /> */}
       {/* <Lesson8 /> */}
-      {/* <Lesson9 /> */}
-      <Lesson10 />
+      {/*  <Lesson9 /> */}
+      {/* <Lesson10 /> */}
+      {/* <Lesson17 /> */}
+      <Project />
       <Footer />
     </div>
   );
