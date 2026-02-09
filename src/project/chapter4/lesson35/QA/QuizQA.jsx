@@ -120,9 +120,11 @@ const QuizQA = (props) => {
       setQuestions([...questions, newQuestion]);
     }
     if (type === "REMOVE") {
-      let questionsClone = _.cloneDeep(questions);
-      questionsClone = questionsClone.filter((item) => item.id !== id);
-      setQuestions(questionsClone);
+      setQuestions((draft) => {
+        draft = draft.filter((item) => item.id !== id);
+        console.log(draft);
+      });
+
     }
   };
 
